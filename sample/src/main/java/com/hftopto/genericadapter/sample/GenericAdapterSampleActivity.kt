@@ -20,7 +20,7 @@ class GenericAdapterSampleActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sample)
 
-        val adapter = GenericAdapter(
+        val adapter = GenericAdapter<Any>(
                 GenericViewBinder(R.layout.li_text, TextData::class) { data ->
                     itemView.text.text = data.text
                 },
