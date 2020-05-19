@@ -2,7 +2,7 @@ package com.hftopto.genericadapter.sample
 
 import android.app.Activity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.hftopfo.genericadapter.GenericViewBinder
 import com.hftopfo.genericadapter.sample.R
 import com.hftopto.genericadapter.GenericAdapter

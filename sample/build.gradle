@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "com.htfopto.genericadapter.sample"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -22,12 +22,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$rootProject.ext.kotlin_version"
-    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    testCompile 'junit:junit:4.12'
-    compile project(path: ':genericadapter')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.ext.kotlin_version"
+    implementation "com.android.support:appcompat-v7:1.1.0"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.ext.recyclerViewVersion"
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':genericadapter')
 }
